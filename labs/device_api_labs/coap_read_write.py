@@ -11,7 +11,7 @@ import ssl
 import urllib
 import time
 
-cik = 'c28765ad55e810804ececb70a0be49aee5e2ed44'
+cik = '<PUT_YOUR_DEVICE_CIK_HERE>'
 
 
 
