@@ -1,8 +1,0 @@
-local sensor = alias['sensor']
-local timer = alias['timer']
---Generate random number every x amount of time
-while true do
-  local ts = timer.wait(now+5)
-  local newval = math.random(1,100)
-  sensor.value = newval
-end
