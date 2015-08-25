@@ -11,7 +11,7 @@ import ssl
 import urllib
 import time
 
-cik = 'c28765ad55e810804ececb70a0be49aee5e2ed44'
+cik = 'PUT_YOUR_DEVICE_CIK_HERE'
 
 print '========================================================================'
 print 'MAKE THE REQUESTS, Using CIK ', cik
@@ -91,7 +91,7 @@ msg.opt.uri_query = (binascii.a2b_hex(cik),)
 msg.payload = "1"
 start = time.time()
 print("Sending Message: {}".format(binascii.b2a_hex(msg.encode())))
-print(coap.humanFormatMessage(msg))
+print(msg)
 
 # Setup Socket as UDP
 sock = socket.socket(socket.AF_INET, # Internet
@@ -105,7 +105,7 @@ print('time',time.time()-start,'ms')
 # Decode and Display Response
 recv_msg = coap.Message.decode(data)
 print("Received Message: {}".format(binascii.b2a_hex(data)))
-print(coap.humanFormatMessage(recv_msg))
+print(recv_msg)
 
 print '--REQUEST / RESPONSE SIZE:----------------------'
 print 'Request:'+ str(len(binascii.b2a_hex(msg.encode()))/2)+ ' Bytes'
